@@ -5,13 +5,12 @@ module.exports = (robot) ->
   robot.respond /check in/i, (res) ->
     res.send "Checking in initiated..."
     res.send "What have you been working on lately?"
-    ref.once 'value', ((snapshot) ->
-      data = snapshot.exportVal();
-      res.send data.name
-      return
-    ), (errorObject) ->
-      res.send 'The read failed: ' + errorObject.code
-      return
+
+  robot.respond /list/i, (res) ->
+    res.send "Here's what you're working on..."
+    ref.once 'value', (snapshot) ->
+      snapshot.forEach (childSnapshot) ->
+        res.send "test"
 
   robot.respond /i'm working on (.*)/i, (res) ->
     task = res.match[1]
