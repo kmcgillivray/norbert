@@ -11,4 +11,14 @@ module.exports = function(robot) {
       });
     });
   });
+
+  robot.respond(/add (.*)/i, function(res){
+    var task = res.match[1];
+    res.send(task);
+    ref.push({
+      name: task,
+      status: "active"
+    });
+    res.send("Task added, captain!");
+  });
 }
