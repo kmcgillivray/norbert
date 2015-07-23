@@ -17,3 +17,11 @@ module.exports = (robot) ->
       res.reply "I'm afraid I can't let you do that."
     else
       res.reply "Opening the #{doorType} doors"
+
+  ham = [
+    ':meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone::meat_on_bone:',
+    ':hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer::hamster::hamburger::hammer:'
+  ]
+  
+  robot.respond /go ham/i, (res) ->
+    res.send res.random ham
